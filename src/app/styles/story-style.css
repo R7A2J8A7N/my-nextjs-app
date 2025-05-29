@@ -1,0 +1,115 @@
+
+
+.story-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.story-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(42, 60, 90, 0.7), rgba(90, 106, 138, 0.7));
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  border-radius: 20px;
+}
+
+/* Image Animation */
+.animated-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Text Styling */
+.text-content {text-align: center; margin-bottom: 3rem; }
+
+.text-line { line-height: 1.2; margin-bottom: 0.5rem; }
+
+.text-listen { font-size: 4rem; font-weight: 800; }
+
+.text-learn, .text-the {
+  font-size: 1.5rem;
+  color: #b0b0b0;
+}
+
+.text-live, .text-story {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Top Right Section */
+.top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.top-right img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Bottom Box */
+.bottom-box {
+  background: linear-gradient(90deg, #1a1a1a 0%, #333 50%, #fff 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-box span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.separator { font-size: 1.2rem; }
+
+.bottom-box img {
+  width: 30px;
+  height: 30px;
+  border-radius: 25%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .text-listen { font-size: 3rem; }
+  .text-live, .text-story { font-size: 2.5rem; }
+  .text-learn, .text-the { font-size: 1.2rem; }
+  .animated-image { width: 120px; height: 120px; }
+  .bottom-box {
+    /* flex-direction: column; */
+    gap: 0.5rem;
+    padding: 1.35rem;
+    margin: 1.45rem;
+    font-size: 0.34rem;
+  }
+}
