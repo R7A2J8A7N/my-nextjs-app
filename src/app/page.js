@@ -9,6 +9,7 @@ export default function Home() {
            <main className={styles.main}>
             <Navbar />
         <StoryContainer />
+        
       </main>
 
     </>

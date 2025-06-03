@@ -1,29 +1,106 @@
-
-
+/* ---------- Container Styles ---------- */
 .story-container {
   position: relative;
   z-index: 1;
   text-align: center;
   color: #fff;
-  padding: 2rem;
+  padding-top: 2.5rem;
   max-width: 100%;
-  border-radius: 20px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .story-container::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(42, 60, 90, 0.7), rgba(90, 106, 138, 0.7));
-  backdrop-filter: blur(10px);
-  z-index: -1;
-  border-radius: 20px;
+  background: url('/images/banner.jpg') center/cover no-repeat;
+  filter: blur(2px);
+  z-index: -2;
 }
 
-/* Image Animation */
+.story-container::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(0,123,255,0.3), rgba(138,43,226,0.3));
+  z-index: -1;
+}
+
+
+
+/* ---------- Quote Section (Top-Right) ---------- */
+.quote-container {
+  position: absolute;
+  top: 2rem;
+  right: 2rem; /* Aligns to the right */
+  max-width: 400px;
+  padding: 1.5rem;
+  /* background: rgba(0, 0, 0, 0.6); */
+  border-radius: 12px;
+  color: #fff;
+  text-align: right;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); */
+  z-index: 5;
+}
+
+.quote-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .quote-container {
+    top: 1rem;
+    right: 1rem;
+    max-width: 90%;
+    padding: 1rem;
+    text-align: right;
+  }
+
+  .quote-text {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* ---------- Main Text Styling ---------- */
+.text-content {
+  margin-top: 1rem; /* Push content below quote */
+  text-align: center;
+}
+
+.text-line {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.text-listen {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.text-learn, .text-the {
+  font-size: 3.5em;
+  color: #fff;
+  padding-right: 25px;
+}
+
+.text-live, .text-story {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+
+/* ---------- Animated Image ---------- */
 .animated-image {
   width: 150px;
   height: 150px;
@@ -37,47 +114,12 @@
   100% { transform: scale(1); opacity: 0.8; }
 }
 
-/* Text Styling */
-.text-content {text-align: center; margin-bottom: 3rem; }
 
-.text-line { line-height: 1.2; margin-bottom: 0.5rem; }
-
-.text-listen { font-size: 4rem; font-weight: 800; }
-
-.text-learn, .text-the {
-  font-size: 1.5rem;
-  color: #b0b0b0;
-}
-
-.text-live, .text-story {
-  font-size: 3.5rem;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-/* Top Right Section */
-.top-right {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.top-right img {
-  width: 24px;
-  height: 24px;
-}
-
-/* Bottom Box */
+/* ---------- Bottom Info Box ---------- */
 .bottom-box {
   background: linear-gradient(90deg, #1a1a1a 0%, #333 50%, #fff 100%);
   padding: 1.5rem;
-  border-radius: 12px;
+  margin-bottom: 0.44rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,10 +130,8 @@
 .bottom-box span {
   color: #fff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
-
-.separator { font-size: 1.2rem; }
 
 .bottom-box img {
   width: 30px;
@@ -99,17 +139,37 @@
   border-radius: 25%;
 }
 
-/* Responsive */
+
+/* ---------- Responsive Breakpoints ---------- */
 @media (max-width: 768px) {
-  .text-listen { font-size: 3rem; }
-  .text-live, .text-story { font-size: 2.5rem; }
-  .text-learn, .text-the { font-size: 1.2rem; }
-  .animated-image { width: 120px; height: 120px; }
+  .quote-container {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    max-width: 90%;
+  }
+
+  .text-listen {
+    font-size: 3rem;
+  }
+
+  .text-learn, .text-the {
+    font-size: 1.8rem;
+  }
+
+  .text-live, .text-story {
+    font-size: 2.5rem;
+  }
+
+  .animated-image {
+    width: 120px;
+    height: 120px;
+  }
+
   .bottom-box {
-    /* flex-direction: column; */
     gap: 0.5rem;
     padding: 1.35rem;
-    margin: 1.45rem;
     font-size: 0.34rem;
   }
 }
