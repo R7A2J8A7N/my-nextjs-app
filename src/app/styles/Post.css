@@ -1,0 +1,78 @@
+/* ---------- Container ---------- */
+.popular-shows-container {
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 80%;
+}
+
+/* ---------- Header ---------- */
+.popular-shows-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.popular-shows-header h2 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* ---------- Search Box ---------- */
+.search-box-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #8f8f8f;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: 260px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.search-icon {
+  color: white;
+  font-size: 1rem;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+/* ---------- Scrollable Image Row ---------- */
+.scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari/Opera */
+}
+
+.image-row {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.scroll-image {
+  flex: 0 0 auto;
+  width: 20%;
+  min-width: 100px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

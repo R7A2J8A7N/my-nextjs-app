@@ -1,11 +1,12 @@
 .audio-book-container {
-  max-width: 400px;
-  margin: 30px auto;
+  max-width: 700px;
+  margin: 28px auto;
   padding: 24px;
   /* background-color: white; */
   border-radius: 12px;
   /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
   text-align: center;
+  margin-right: 29%;
 }
 
 .audio-book-title {
@@ -16,6 +17,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  
 }
 
 
@@ -24,7 +26,7 @@
   display: flex;
   justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .btn {
@@ -37,11 +39,19 @@
   align-items: center;
   gap: 8px;
   transition: background-color 0.3s ease;
+  letter-spacing: normal;
 }
 
 .try-btn {
-  background: linear-gradient(135deg, #ffffff, #007bff, #8a2be2); /* white, blue, violet */
+  background: linear-gradient(135deg, #ffffff, #007bff, #8a2be2); 
   color: #fff;
+  width: 40%;
+  text-align: center;
+  justify-content: center;
+    text-transform: uppercase;
+  
+/* border-radius: 2rem; */
+
 }
 
 .try-btn:hover {
@@ -49,8 +59,14 @@
 }
 
 .watch-btn {
-  background-color: #000; /* Navy Blue */
-  color: #fff;
+  width: 40%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+      text-transform: uppercase;
+    /* border: 1px solid white; */
+    
 }
 
 .watch-btn:hover {

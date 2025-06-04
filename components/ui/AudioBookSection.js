@@ -13,7 +13,7 @@ export default function AudioBookSection() {
       <div className="button-group">
         <button className="btn try-btn">
           <FaHeadphones className="btn-icon" />
-          Try now for free
+          Try-now-for-free
         </button>
         <button className="btn watch-btn">
           <FaPlay className="btn-icon" />

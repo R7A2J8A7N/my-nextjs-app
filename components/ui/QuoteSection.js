@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../src/app/styles/Story-style.css";
+import "../../src/app/styles/StoryContainer.css";
 
 const QuoteSection = () => {
   return (
