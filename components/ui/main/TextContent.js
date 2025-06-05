@@ -3,7 +3,7 @@ export default function TextContent() {
   return (
     <div className="text-content">
       <div className="text-line">
-        <span className="text-listen"><apn>"</apn>listen</span>
+        <span className="text-listen"><span>"</span>listen</span>
       </div>
       <div className="text-line">
         <span className="text-learn">learn</span>

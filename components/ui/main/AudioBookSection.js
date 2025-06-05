@@ -1,6 +1,6 @@
 "use client ";
 import { FaCheckCircle, FaPlay, FaHeadphones } from 'react-icons/fa';
-import '../../src/app/styles/AudioBookSection.css'; // Adjust path based on your structure
+import '../../../src/app/styles/AudioBookSection.css'; // Adjust path based on your structure
 
 export default function AudioBookSection() {
   return (

@@ -1,0 +1,30 @@
+/* Main wrapper */
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Flex container for content */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Left content area - black background */
+.left-sidebar {
+  width: 68%;
+  background-color: #4052593e; /* Black */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Right sidebar */
+.right-sidebar {
+  width: 30%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}

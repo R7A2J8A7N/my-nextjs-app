@@ -1,9 +1,12 @@
 "use client";
+import { FaSearch } from "react-icons/fa";
+import { useState } from "react";
 
-import "../../../src/app/styles/Post.css";
-import { FiSearch } from "react-icons/fi";
+import "../../../src/app/styles/Post.css"; // your CSS path
 
 export default function PopularShows() {
+  const [search, setSearch] = useState("");
+
   const images = [
     "/images/banner.jpg",
     "/images/banner.jpg",
@@ -14,31 +17,32 @@ export default function PopularShows() {
     "/images/banner.jpg",
   ];
 
+  const filtered = images.filter((img, index) =>
+    `Show ${index + 1}`.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="popular-shows-container">
-      {/* Top Section: Title + Search */}
+      {/* Header */}
       <div className="popular-shows-header">
         <h2>Popular Shows</h2>
         <div className="search-box-container">
-          <FiSearch className="search-icon" />
+          <FaSearch className="search-icon" />
           <input
-            type="text"
             className="search-input"
-            placeholder="Search"
+            type="text"
+            placeholder="Search shows..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
         </div>
       </div>
 
-      {/* Scrollable Image Row */}
+      {/* Scrollable image row */}
       <div className="scroll-container">
         <div className="image-row">
-          {images.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`Show ${index + 1}`}
-              className="scroll-image"
-            />
+          {filtered.map((img, idx) => (
+            <img key={idx} src={img} alt={`Show ${idx + 1}`} className="scroll-image" />
           ))}
         </div>
       </div>

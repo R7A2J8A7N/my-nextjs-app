@@ -1,0 +1,84 @@
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.song-item:hover {
+  background-color: #eaf3ff; /* Soft blue for hover */
+  transform: translateY(-2px); /* slight lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.song-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.song-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #2563eb; /* Tailwind's blue-600 */
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.song-text h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937; /* gray-800 */
+}
+
+.song-text p {
+  margin: 2px 0 0;
+  color: #6b7280; /* gray-500 */
+  font-size: 14px;
+}
+
+.song-right {
+  display: flex;
+  gap: 12px;
+  color: #4b5563; /* gray-600 */
+}
+
+.icon {
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #2563eb; /* blue on hover */
+}
+.song-list-scroll {
+  max-height: 500px; /* Adjust height as needed */
+  overflow-y: auto;
+  padding-right: 8px; /* prevents scrollbar from overlapping content */
+}
+
+/* Optional: Customize scrollbar for better UI */
+.song-list-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.song-list-scroll::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+
+.song-list-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
