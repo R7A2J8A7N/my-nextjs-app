@@ -15,8 +15,8 @@ export default function Navbar() {
       <div className="nav-container">
         {/* LEFT - Logo */}
         <div className="logo">
-          <img src="/logo1.png" alt="MyBrand Logo" className="logo-image" />
-          <span className="logo-text">Audio</span>
+          <img src="/images/logo.png" alt="MyBrand Logo" className="logo-image" />
+          {/* <span className="logo-text">Audio</span> */}
         </div>
 
         {/* CENTER - Menu Items */}

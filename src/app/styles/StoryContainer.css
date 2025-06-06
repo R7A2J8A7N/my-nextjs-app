@@ -13,67 +13,124 @@
 .story-container::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%;
   height: 100%;
-  background: url('/images/banner.jpg') center/cover no-repeat;
   filter: blur(2px);
-  z-index: -2;
+  z-index: -3;
 }
 
 .story-container::after {
   content: '';
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(0,123,255,0.3), rgba(138,43,226,0.3));
-  z-index: -1;
+  background: linear-gradient(180deg, #FFFFFF -53.67%, #000000 61.58%);
+  z-index: -2;
 }
 
+/* ---------- Side Blurred Gradient Backgrounds ---------- */
+.blur-side {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(392x);
+ background: linear-gradient(
+    68.81deg,
+    rgba(191, 0, 255, 0.10) 20.89%,   /* #BF00FF with 80% opacity */
+    rgba(77, 0, 255, 0.10) 45.02%,    /* #4D00FF with 80% opacity */
+    rgba(0, 255, 208, 0.10) 71.1%     /* #00FFD0 with 80% opacity */
+  );  z-index: -1;
+  pointer-events: none;
+  opacity: 0.75;
+  /* border-radius: 50%; */
+}
 
+.blur-left {
+  left: 0;
+  /* border-top-right-radius: 20%; */
+  /* border-bottom-right-radius: 20%; */
+}
 
-/* ---------- Quote Section (Top-Right) ---------- */
+.blur-right {
+  right: 0;
+  /* border-top-left-radius: 20%; */
+  /* border-bottom-left-radius: 20%; */
+}
+
+/* ---------- Animated Background Image Wrapper ---------- */
+.background-wrapper {
+     position: absolute;
+    top: -85px;
+    left: 32%;
+    width: 450px;
+    height: 450px;
+    z-index: -1;
+    overflow: hidden;
+    border-radius: 10%;
+
+}
+
+.background-wrapper > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* ---------- Pulse Animation ---------- */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* ---------- Quote Section ---------- */
 .quote-container {
   position: absolute;
   top: 2rem;
-  right: 2rem; /* Aligns to the right */
+  right: 2rem;
   max-width: 400px;
   padding: 1.5rem;
-  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 12px;
   color: #fff;
-  text-align: right;
-  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); */
   z-index: 5;
+  /* background: rgba(0, 0, 0, 0.4); Optional background */
+  backdrop-filter: blur(6px);     /* Optional blur */
+}
+
+.quote-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
 }
 
 .quote-text {
   font-size: 1rem;
   line-height: 1.6;
   color: #f1f1f1;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  .quote-container {
-    top: 1rem;
-    right: 1rem;
-    max-width: 90%;
-    padding: 1rem;
-    text-align: right;
-  }
-
-  .quote-text {
-    font-size: 0.95rem;
-  }
+.pistar-icon {
+  font-size: 38px;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 4px; /* adjust vertical alignment */
 }
-
-
 
 /* ---------- Main Text Styling ---------- */
 .text-content {
-  margin-top: 4rem; /* Push content below quote */
+  position: relative;
+  margin-top: 3rem;
+  z-index: 2;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .text-line {
@@ -81,23 +138,22 @@
   margin-bottom: 0.5rem;
 }
 
-.text-listen {padding-right: 30%;
+.text-listen {
+  padding-right: 30%;
   color: #fff;
   font-size: 4rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-
   font-weight: 800;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-.text-learn{
-   /* padding-top: 0px; */
-  font-size: 3.5em;
+.text-learn {
+  font-size: 2.5em;
   color: #ffffff82;
-  line-height: normal;
-  padding-right: 12%;
-  /* padding: 0px; */
-
+  line-height: 1.0;
+  padding-right: 20%;
+  font-weight: 700;
 }
+
 .text-the {
   font-size: 1.8em;
   color: #ffffff92;
@@ -106,81 +162,86 @@
   padding-right: 25px;
 }
 
-.text-live{
-  font-size: 4.5rem;
-  color: #fff;
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-
-} 
+.text-live,
 .text-story {
   font-size: 4.5rem;
   color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   font-weight: 800;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
-
-
-/* ---------- Animated Image ---------- */
-.animated-image {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 2rem;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
-}
-
 
 /* ---------- Bottom Info Box ---------- */
-.bottom-box {
+.bottom-box-container {
   position: relative;
-  background: linear-gradient(90deg, #727171 0%, #1d1a1a 50%, #727171 100%);
-  padding: 1.5rem;
-  margin-bottom: 1.44rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
+  background-color: #1f1f1f;
+  border-top: 1px solid #9b59b6;
+  border-radius: 10px 10px 0 0;
+  padding: 16px 24px;
   overflow: hidden;
-  z-index: 1;
-  border: 1px solid linear-gradient(90deg, #505cdf 0%, #1fc0cf 50%, #9b1cfd 100%);
 }
 
-.bottom-box {
-    color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
-  z-index: 2;
-
-}
-span {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
-  z-index: 2;
-}
-
-.bottom-box .separator {
-  color: #ccc;
-  /* font-weight: bold; */
-  z-index: 2;
-  font-size: 2rem ;
+.wave-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/wave-bars.svg"); /* Replace with your actual path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
 }
 
-.bottom-box svg {
-  width: 22px;
-  height: 22px;
-  z-index: 2;
+.bottom-box-content {
+      display: flex
+;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    gap: 60px;
 }
 
-/* ---------- Audio Visualizer Bars ---------- */
+.bottom-box-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background: #2d2d2d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient-icon {
+  background: linear-gradient(90deg, #CE67CB 0%, #717AF0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.separator {
+  height: 30px;
+  width: 1px;
+  background-color: white;
+  opacity: 0.3;
+}
+
+
+/* ---------- Audio Visualizer ---------- */
 .audio-visualizer {
   position: absolute;
   bottom: 20px;
@@ -201,39 +262,32 @@ span {
   width: 6px;
   background: #43f117;
   height: 40%;
-  animation: bounce 1s infinite ease-in-out alternate;
+}
+/* ---------- Top-Left Animated Polygon Image ---------- */
+.image-top-left {
+      position: absolute;
+    top: 271px;
+    left: -17px;
+    z-index: -1;
+    animation: pulse 3s ease-in-out infinite;
 }
 
-.audio-visualizer span:nth-child(1) {
-  animation-delay: 0s;
+.image-top-left img {
+  width: 70%;
+  height: 60%;
+  opacity: 0.95;
 }
-.audio-visualizer span:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.audio-visualizer span:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.audio-visualizer span:nth-child(4) {
-  animation-delay: 0.45s;
-}
-.audio-visualizer span:nth-child(5) {
-  animation-delay: 0.6s;
-}
-
-@keyframes bounce {
-  0% { height: 15%; }
-  100% { height: 90%; }
-}
-
-/* Animation for wave effect */
-@keyframes waveAnimation {
-  0% {
-    transform: translateX(0);
+@media (max-width: 768px) {
+  .image-top-left {
+    top: 10px;
+    left: 10px;
   }
-  100% {
-    transform: translateX(-50%);
+
+  .image-top-left img {
+    width: 90px;
   }
 }
+
 
 /* ---------- Responsive Breakpoints ---------- */
 @media (max-width: 768px) {
@@ -249,22 +303,30 @@ span {
     font-size: 3rem;
   }
 
-  .text-learn, .text-the {
+  .text-learn,
+  .text-the {
     font-size: 1.8rem;
   }
 
-  .text-live, .text-story {
+  .text-live,
+  .text-story {
     font-size: 2.5rem;
   }
 
-  .animated-image {
-    width: 120px;
-    height: 120px;
+  .background-wrapper {
+    width: 300px;
+    height: 250px;
+    left: 10%;
   }
 
   .bottom-box {
     gap: 0.5rem;
     padding: 1.35rem;
-    font-size: 0.34rem;
+    font-size: 0.85rem;
+  }
+
+  .blur-side {
+    width: 50%;
+    opacity: 0.5;
   }
 }

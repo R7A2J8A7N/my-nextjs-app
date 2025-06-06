@@ -1,150 +1,54 @@
-"use client";
+"use client"
+import React from "react";
+import { MdCheckCircle, MdMic, MdTune } from "react-icons/md";
+import "../../../src/app/styles/StoryContainer.css"; // Import the CSS file for styles
 
-import { CheckCircle, Mic, SlidersHorizontal } from "lucide-react";
-
-export default function BottomBox() {
+const BottomBox = () => {
   return (
-    <div className="bottom-box">
-      {/* Green bar visualizer */}
-      <div className="audio-visualizer">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div className="bottom-box-container">
+      {/* Audio bar background */}
+      <div className="wave-background" />
 
-      {/* Info Items */}
-      <CheckCircle size={22} color="#4CAF50" />
-      <span>real time</span>
-      <span className="separator">|</span>
-      <Mic size={22} color="#2196F3" />
-      <span>high quality</span>
-      <span className="separator">|</span>
-      <SlidersHorizontal size={22} color="#FF9800" />
-      <span>custom voice</span>
+      <div className="bottom-box-content">
+        {/* Item 1 */}
+        <div className="bottom-box-item">
+          <div className="icon-circle">
+            <MdCheckCircle className="gradient-icon" size={24} />
+          </div>
+          <div className="item-text">
+            <span>Real-Time</span>
+            <span>Update</span>
+          </div>
+        </div>
+
+        <div className="separator" />
+
+        {/* Item 2 */}
+        <div className="bottom-box-item">
+          <div className="icon-circle">
+            <MdMic className="gradient-icon" size={24} />
+          </div>
+          <div className="item-text">
+            <span>High-Quality</span>
+            <span>Sound</span>
+          </div>
+        </div>
+
+        <div className="separator" />
+
+        {/* Item 3 */}
+        <div className="bottom-box-item">
+          <div className="icon-circle">
+            <MdTune className="gradient-icon" size={24} />
+          </div>
+          <div className="item-text">
+            <span>Custom Voice</span>
+            <span>Creation</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default BottomBox;

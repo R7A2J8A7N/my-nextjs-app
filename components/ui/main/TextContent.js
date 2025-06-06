@@ -1,17 +1,21 @@
 "use client"
+import AnimatedImage from "./AnimatedImage";
 export default function TextContent() {
   return (
     <div className="text-content">
+        <div className="background-wrapper">
+    <AnimatedImage />
+  </div>
       <div className="text-line">
-        <span className="text-listen"><span>"</span>listen</span>
+        <span className="text-listen"><span>"</span>Listen.</span>
       </div>
       <div className="text-line">
-        <span className="text-learn">learn</span>
+        <span className="text-learn">Learn.</span>
       </div>
       <div className="text-line">
-         <span className="text-live">live</span>
+         <span className="text-live">Live</span>
         <span className="text-the">the</span>
-        <span className="text-story">story<span>"</span></span>
+        <span className="text-story">Story<span>"</span></span>
       </div>
     </div>
   );
