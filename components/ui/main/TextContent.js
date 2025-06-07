@@ -1,11 +1,9 @@
 "use client"
-import AnimatedImage from "./AnimatedImage";
+// import AnimatedImage from "./AnimatedImage";
 export default function TextContent() {
   return (
     <div className="text-content">
-        <div className="background-wrapper">
-    <AnimatedImage />
-  </div>
+        
       <div className="text-line">
         <span className="text-listen"><span>"</span>Listen.</span>
       </div>

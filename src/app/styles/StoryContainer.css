@@ -4,7 +4,7 @@
   z-index: 1;
   text-align: center;
   color: #fff;
-  padding-top: 2.5rem;
+  /* padding-top: 2.5rem; */
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -64,11 +64,11 @@
 
 /* ---------- Animated Background Image Wrapper ---------- */
 .background-wrapper {
-     position: absolute;
-    top: -85px;
-    left: 32%;
-    width: 450px;
-    height: 450px;
+        position: absolute;
+    top: 80px;
+    left: 30%;
+    width: 477px;
+    height: 500px;
     z-index: -1;
     overflow: hidden;
     border-radius: 10%;
@@ -223,7 +223,7 @@
 }
 
 .gradient-icon {
-  background: linear-gradient(90deg, #CE67CB 0%, #717AF0 100%);
+  color:rgba(206, 103, 203, 1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

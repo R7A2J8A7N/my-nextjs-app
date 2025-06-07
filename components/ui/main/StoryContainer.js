@@ -5,14 +5,16 @@ import BottomBox from './BottomBox';
 import QuoteSection from './QuoteSection';
 import AudioBookSection from './AudioBookSection';
 import '../../../src/app/styles/StoryContainer.css';
-
+import AnimatedImage from './AnimatedImage';
 export default function StoryContainer() {
   return (
     <div className="story-container">
       {/* ✅ Blurred colored sides */}
       <div className="blur-side blur-left"></div>
       <div className="blur-side blur-right"></div>
-
+    <div className="background-wrapper">
+    <AnimatedImage />
+  </div>
       <TextContent />
       <AudioBookSection />
       <QuoteSection />
