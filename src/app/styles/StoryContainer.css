@@ -1,12 +1,12 @@
 /* ---------- Container Styles ---------- */
 .story-container {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
   text-align: center;
   color: #fff;
   padding-top: 2.5rem;
   max-width: 100%;
-  height: 92vh;
+  max-height: 100%;
   overflow: hidden;
 }
 
@@ -91,16 +91,16 @@
 
 /* ---------- Quote Section ---------- */
 .quote-container {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  max-width: 400px;
-  padding: 1.5rem;
-  border-radius: 12px;
-  color: #fff;
-  z-index: 5;
-  /* background: rgba(0, 0, 0, 0.4); Optional background */
-  backdrop-filter: blur(6px);     /* Optional blur */
+      position: absolute;
+    top: 8rem;
+    right: 4rem;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: #fff;
+    z-index: 5;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
 }
 
 .quote-content {
