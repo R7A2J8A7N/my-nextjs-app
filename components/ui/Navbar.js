@@ -29,7 +29,7 @@ export default function Navbar() {
 
         {/* RIGHT - Auth Buttons */}
         <div className="auth-buttons">
-          <Link href="/login" className="login-btn">Sign In</Link>
+          <Link href="/" className="login-btn">Sign In</Link>
           <Link href="/signup" className="signup-btn">Sign up for free</Link>
         </div>
 

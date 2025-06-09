@@ -1,0 +1,204 @@
+:root {
+  --primary-color: #4F46E5; /* Indigo */
+  --primary-hover: #4338CA;
+  --text-color: #1e1e1e;
+  --subtext-color: #666;
+  --input-bg: #f9f9f9;
+  --border-color: #dcdcdc;
+  --divider-color: #e5e7eb;
+  --error-color: #e53935;
+  --link-color: #4F46E5;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background: #f8f9fa; */
+  padding: 20px;
+}
+
+.auth-form {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.form-subtext {
+  text-align: center;
+  font-size: 14px;
+  color: var(--subtext-color);
+  margin-bottom: 24px;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #f1f1f1;
+}
+
+.social-btn.linkedin {
+  color: #0a66c2;
+  border-color: #0a66c2;
+}
+
+.divider {
+  text-align: center;
+  margin: 24px 0;
+  position: relative;
+}
+
+.divider span {
+  background-color: #fff;
+  padding: 0 12px;
+  color: #aaa;
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+}
+
+.divider::before {
+  content: "";
+  height: 1px;
+  background: var(--divider-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-color);
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+}
+
+.password-field {
+  position: relative;
+}
+
+.forgot-link {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  font-size: 12px;
+  transform: translateY(-50%);
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.checkbox-group input {
+  margin-top: 3px;
+}
+
+.checkbox-group a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+.signin-link {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.signin-link a {
+  color: var(--link-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+.error-text {
+  color: var(--error-color);
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-align: left;
+}
