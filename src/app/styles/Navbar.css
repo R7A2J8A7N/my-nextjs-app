@@ -65,7 +65,7 @@
   border-radius: 14px;
   transition: all 0.3s ease-in-out;
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: 18px;
 }
 .nav-menu li a:hover {
   color: #f8f9fb;
@@ -148,8 +148,13 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 .hamburger:focus {
-  outline: 2px solid #007BFF;
+  /* outline: 2px solid #d6d9dba9; */
+ /* outline-border-radius: 4px; */
   outline-offset: 2px;
+}
+
+.list-item{
+  margin: 12px auto ;
 }
 
 /* Mobile (< 768px) */
@@ -172,12 +177,17 @@
     border: 1px solid #919191;
   }
   .nav-menu.active {
-    display: flex;
-    transform: translateY(0);
-    opacity: 1;
+            display: flex
+;
+        transform: translateY(0);
+        opacity: 1;
+        /* backdrop-filter: blur(17px); */
+        background: #ffffff21;
+        margin-top: 6px;
+        margin-left: 10px;
   }
   .nav-menu li a {
-    padding: 12px;
+    padding: 12px 26px;
     font-size: 1.1rem;
   }
   .hamburger {

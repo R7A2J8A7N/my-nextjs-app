@@ -21,10 +21,10 @@ export default function Navbar() {
 
         {/* CENTER - Menu Items */}
         <ul className={`nav-menu ${menuOpen ? 'active' : ''}`} aria-hidden={!menuOpen ? 'true' : 'false'}>
-          <li><Link href="/" className="nav-link">Home</Link></li>
-          <li><Link href="/about" className="nav-link">About</Link></li>
-          <li><Link href="/features" className="nav-link">Features</Link></li>
-          <li><Link href="/contact" className="nav-link">Contact</Link></li>
+          <li className='list-item'><Link href="/" className="nav-link">Home</Link></li>
+          <li className='list-item'><Link href="/about" className="nav-link">About</Link></li>
+          <li className='list-item'><Link href="/features" className="nav-link">Features</Link></li>
+          <li className='list-item'><Link href="/contact" className="nav-link">Contact</Link></li>
         </ul>
 
         {/* RIGHT - Auth Buttons */}
