@@ -1,5 +1,6 @@
 "use client"
 // import AnimatedImage from "./AnimatedImage";
+import './TextContent.css'; // Adjust the path based on your structure
 export default function TextContent() {
   return (
     <div className="text-content">

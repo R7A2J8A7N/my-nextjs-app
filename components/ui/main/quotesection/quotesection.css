@@ -1,0 +1,51 @@
+
+
+/* ---------- Quote Section ---------- */
+.quote-container {
+    position: absolute;
+    top: 8rem;
+    right: 4rem;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: #fff;
+    z-index: 5;
+    /* -webkit-backdrop-filter: blur(6px); */
+    /* backdrop-filter: blur(6px); */
+}
+
+.quote-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+.pistar-icon {
+  font-size: 38px;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 4px; /* adjust vertical alignment */
+}
+
+.quote-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .quote-container {
+        display: none;
+  }
+ 
+  
+}
+
+@media screen and (max-width: 480px) {
+  .quote-container {
+   display: none;
+  }
+}
+

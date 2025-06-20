@@ -1,7 +1,7 @@
 import Navbar from "../../../components/ui/Navbar";
 import MusicPlayer from "../../../components/ui/songlist/MusicPlayer";
 import SongList from "../../../components/ui/songlist/SongList";
-import AnimatedImage from "../../../components/ui/main/AnimatedImage";
+import AnimatedImage from "../../../components/ui/main/AnimatedImage/AnimatedImage";
 import "../../../src/app/styles/StoryContainer.css"; // link to external CSS
 
 import "./play.css"; // link to external CSS

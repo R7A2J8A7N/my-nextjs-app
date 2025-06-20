@@ -1,0 +1,90 @@
+
+/* ---------- Bottom Info Box ---------- */
+.bottom-box-container {
+  position: relative;
+  background-color: #1f1f1f;
+  border-top: 1px solid #9b59b6;
+  border-radius: 10px 10px 0 0;
+  padding: 16px 24px;
+  overflow: hidden;
+}
+
+.wave-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/wave-bars.svg"); /* Replace with your actual path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.bottom-box-content {
+      display: flex
+;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    gap: 60px;
+}
+
+.bottom-box-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.1;
+}
+.item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.separator {
+  height: 30px;
+  width: 1px;
+  background-color: white;
+  opacity: 0.3;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background: #2d2d2d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient-icon {
+  color:rgba(206, 103, 203, 1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .bottom-box-container {
+    max-width: 100%;
+        margin: 0 auto;
+  }
+  .bottom-box {
+    gap: 0.5rem;
+    padding: 1.35rem;
+    font-size: 0.85rem;
+  }
+
+  .bottom-box-content{
+    gap: 10px;
+  }
+  .bottom-box-item{
+    gap: 2px;
+    font-size: 12px;
+  }
+}

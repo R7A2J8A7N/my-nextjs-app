@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../../src/app/styles/StoryContainer.css";
+import "./QuoteSection.css"; // Adjust the path based on your structure
 import { PiStarFourFill } from "react-icons/pi";
 
 const QuoteSection = () => {

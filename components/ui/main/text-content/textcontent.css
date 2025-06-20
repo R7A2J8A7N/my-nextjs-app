@@ -1,0 +1,67 @@
+/* ---------- Main Text Styling ---------- */
+.text-content {
+  position: relative;
+  margin-top: 3rem;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.text-line {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.text-listen {
+  padding-right: 30%;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.text-learn {
+  font-size: 2.5em;
+  color: #ffffff82;
+  line-height: 1.0;
+  padding-right: 20%;
+  font-weight: 700;
+}
+
+.text-the {
+  font-size: 1.8em;
+  color: #ffffff92;
+  padding-left: 12px;
+  font-weight: 600;
+  padding-right: 25px;
+}
+
+.text-live,
+.text-story {
+  font-size: 4.5rem;
+  color: #fff;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .text-content {
+    margin: 0px ;
+    
+  }
+  .text-listen {
+    font-size: 3rem;
+  }
+
+  .text-learn,
+  .text-the {
+    font-size: 1.8rem;
+  }
+
+  .text-live,
+  .text-story {
+    font-size: 2.5rem;
+  }
+
+}
+

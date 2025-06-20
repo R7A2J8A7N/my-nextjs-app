@@ -1,11 +1,11 @@
 "use client"; // ✅ Tells Next.js this is a Client Component
 
-import TextContent from './TextContent';
-import BottomBox from './BottomBox';
-import QuoteSection from './QuoteSection';
-import AudioBookSection from './AudioBookSection';
-import '../../../src/app/styles/StoryContainer.css';
-import AnimatedImage from './AnimatedImage';
+import TextContent from '../text-content/TextContent';
+import BottomBox from '../bottombox/BottomBox';
+import QuoteSection from '../quotesection/QuoteSection';
+import AudioBookSection from '../audiobook/AudioBookSection';
+import '../storysection/StoryContainer.css'; // ✅ Import the CSS file for styles
+import AnimatedImage from '../AnimatedImage/AnimatedImage';
 export default function StoryContainer() {
   return (
     <div className="story-container">

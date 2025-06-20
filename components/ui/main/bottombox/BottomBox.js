@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import { MdCheckCircle, MdMic, MdTune } from "react-icons/md";
-import "../../../src/app/styles/StoryContainer.css"; // Import the CSS file for styles
+import "../bottombox/bottombox.css"; // Import the CSS file for styles
 
 const BottomBox = () => {
   return (

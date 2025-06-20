@@ -3,7 +3,7 @@
 import Navbar from "../../../components/ui/Navbar";
 import Post from "../../../components/ui/post/Post";
 import "../../../src/app/styles/StoryContainer.css";
-import AnimatedImage from "../../../components/ui/main/AnimatedImage";
+import AnimatedImage from "../../../components/ui/main/AnimatedImage/AnimatedImage";
 
 export default function Home() {
   return (

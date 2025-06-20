@@ -1,7 +1,7 @@
 import Navbar from "../../../components/ui/Navbar";
 import Signup from "../../../components/ui/authentication/Signup";
 // import AnimatedImage from "../../../components/ui/main/AnimatedImage";
-import AnimatedImage from "../../../components/ui/main/AnimatedImage";
+import AnimatedImage from "../../../components/ui/main/AnimatedImage/AnimatedImage";
 import "../../../src/app/styles/StoryContainer.css"; // link to external CSS
 
 // import Signup from "../../../components/ui/authentication/Signup";
